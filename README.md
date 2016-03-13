@@ -133,8 +133,7 @@ Next, lets explore some of the many form elements we can use to gather user inpu
   <option value="small" selected>small</option>
   <option value="medium">medium</option>
   <option value="large">large</option>
-</select>
-
+</select><br>
 
 #### Textarea
 
