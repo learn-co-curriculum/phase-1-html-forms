@@ -63,21 +63,27 @@ By looking at the headers of our request in the Developer Tools > Network tab, w
 
 HTTP Post request is ideally used when we wish to post content to the server. This is the more appropriate of the two methods for sending something like a password as the content is sent within Form Data and not directly visible in a query string in the URL as they are with GET requests.
 
-Next, lets explore some of the many form elements we can use to gather user input.
+Next, let's explore some of the many form elements we can use to gather user input.
 
 #### Text Inputs
 
+Setting the input element with a `type="text"` gives our user a place to type in a single line of text content. The `placeholder` attribute puts some dummy text into the element that will be replaced as the user starts typing. The `name` attribute gives our input value a label. This makes it possible to grab its value at the other end on the server by calling up the value by giving its name (key).
+
 ```html
 <input type="text" name="username" placeholder="username">
 ```
 
 <input type="text" name="username" placeholder="username">
 
+Setting the input element with a `type="password"` displays dots as the user types characters instead of the actual characters. This is useful when private information is entered that we don not want others around the user to read.
+
 ```html
 <input type="password" name="password" placeholder="password">
 ```
 
 <input type="password" name="password" placeholder="password">
+
+Setting the input element with a `type="tel"` will bring up the numeric keypad on supporting mobile devices.
 
 ```html
 <input type="tel" name="phone" placeholder="phone">
@@ -87,11 +93,15 @@ Next, lets explore some of the many form elements we can use to gather user inpu
 
 #### Hidden Inputs
 
+Setting the input element with a `type="hidden"` will send the inserted `value` attributes data along with the form submission, but won't make the data visible in the browser window.
+
 ```html
 <input type="hidden" name="id" value="UID-99298356982">
 ```
 
 #### Submit Buttons
+
+Setting the input element with a `type="submit"` will create a submission button that will submit the form upon clicking it. The `value` attribute holds the text that will appear on the button.
 
 ```html
 <input type="submit" value="submit">
@@ -100,6 +110,8 @@ Next, lets explore some of the many form elements we can use to gather user inpu
 <input type="submit" value="submit">
 
 #### Radio Inputs
+
+Radio inputs are useful when you want to have several possible values but wish to limit the user to choosing one or another. To accomplish this we must set different `value` attributes for each radio button, but they must share the same `name` attribute. 
 
 ```html
 <input type="radio" name="gender" value="male"> Male <br>
@@ -111,6 +123,8 @@ Next, lets explore some of the many form elements we can use to gather user inpu
 
 #### Checkboxes 
 
+Checkboxes are ideal if we wish to allow our user to choose one, another, or both values.
+
 ```html
 <input type="checkbox" name="vehicle-1" value="bike"> Bike <br>
 <input type="checkbox" name="vehicle-2" value="car"> Car
@@ -120,6 +134,8 @@ Next, lets explore some of the many form elements we can use to gather user inpu
 <input type="checkbox" name="vehicle-2" value="car"> Car
 
 #### Select Menus
+
+Select menus create a nice drop menu which multiple selectable options. Here the user must also choose a single option, so this could be a replacement for a set of radio buttons. Here we must assign a text lablel between the opening and closing option elements as well as a `value` attribute that will hold the choice the user selects that will be passed along during form submission.
 
 ```html
 <select name="size">
@@ -137,6 +153,8 @@ Next, lets explore some of the many form elements we can use to gather user inpu
 
 #### Textarea
 
+Textarea elements are useful if we wish to allow our user to insert multiple lines of text, for example if we wish to gather feedback that requires they can type as much or as little a response as they like.
+
 ```html
 <textarea name="message"></textarea>
 ```
@@ -144,6 +162,8 @@ Next, lets explore some of the many form elements we can use to gather user inpu
 <textarea name="message"></textarea>
 
 ### Iframes
+
+Iframe elements allow us to link to other HTML content from within a frame window on our pages. The `src` attribute points to the location of other html content elsewhere and display it within the current page.
 
 ```html
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d335994.89219194185!2d2.0673752159642937!3d48.8589713267984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2sus!4v1457911182825" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
