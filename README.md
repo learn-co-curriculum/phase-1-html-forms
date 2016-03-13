@@ -63,33 +63,93 @@ By looking at the headers of our request in the Developer Tools > Network tab, w
 
 HTTP Post request is ideally used when we wish to post content to the server. This is the more appropriate of the two methods for sending something like a password as the content is sent within Form Data and not directly visible in a query string in the URL as they are with GET requests.
 
+Next, lets explore some of the many form elements we can use to gather user input.
+
 #### Text Inputs
 
-...
+```html
+<input type="text" name="username" placeholder="username">
+```
 
-#### Radio Inputs
+<input type="text" name="username" placeholder="username">
 
-...
+```html
+<input type="password" name="password" placeholder="password">
+```
 
-#### Checkboxes 
+<input type="password" name="password" placeholder="password">
 
-...
+```html
+<input type="tel" name="phone" placeholder="phone">
+```
 
-#### Select Menus
+<input type="tel" name="phone" placeholder="phone">
 
-...
+#### Hidden Inputs
 
-#### Textarea
-
-...
+```html
+<input type="hidden" name="id" value="UID-99298356982">
+```
 
 #### Submit Buttons
 
-...
+```html
+<input type="submit" value="submit">
+```
+
+<input type="submit" value="submit">
+
+#### Radio Inputs
+
+```html
+<input type="radio" name="gender" value="male"> Male <br>
+<input type="radio" name="gender" value="female"> Female
+```
+
+<input type="radio" name="gender" value="male"> Male <br>
+<input type="radio" name="gender" value="female"> Female
+
+#### Checkboxes 
+
+```html
+<input type="checkbox" name="vehicle-1" value="bike"> Bike <br>
+<input type="checkbox" name="vehicle-2" value="car"> Car
+```
+
+<input type="checkbox" name="vehicle-1" value="bike"> Bike <br>
+<input type="checkbox" name="vehicle-2" value="car"> Car
+
+#### Select Menus
+
+```html
+<select name="size">
+  <option value="small" selected>small</option>
+  <option value="medium">medium</option>
+  <option value="large">large</option>
+</select>
+```
+
+<select name="size">
+  <option value="small" selected>small</option>
+  <option value="medium">medium</option>
+  <option value="large">large</option>
+</select>
+
+#### Textarea
+
+```html
+<textarea name="message"></textarea>
+```
+
+<textarea name="message"></textarea>
 
 ### Iframes
 
-...
+```html
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d335994.89219194185!2d2.0673752159642937!3d48.8589713267984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2sus!4v1457911182825" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+```
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d335994.89219194185!2d2.0673752159642937!3d48.8589713267984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2sus!4v1457911182825" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 ## Summary
 
