@@ -102,21 +102,21 @@ Next, lets explore some of the many form elements we can use to gather user inpu
 #### Radio Inputs
 
 ```html
-<input type="radio" name="gender" value="male"> Male <br>
+<input type="radio" name="gender" value="male"> Male 
 <input type="radio" name="gender" value="female"> Female
 ```
 
-<input type="radio" name="gender" value="male"> Male <br>
+<input type="radio" name="gender" value="male"> Male 
 <input type="radio" name="gender" value="female"> Female
 
 #### Checkboxes 
 
 ```html
-<input type="checkbox" name="vehicle-1" value="bike"> Bike <br>
+<input type="checkbox" name="vehicle-1" value="bike"> Bike 
 <input type="checkbox" name="vehicle-2" value="car"> Car
 ```
 
-<input type="checkbox" name="vehicle-1" value="bike"> Bike <br>
+<input type="checkbox" name="vehicle-1" value="bike"> Bike 
 <input type="checkbox" name="vehicle-2" value="car"> Car
 
 #### Select Menus
