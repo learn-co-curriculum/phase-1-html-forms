@@ -20,21 +20,9 @@ Forms are essential for gathering user information from site visitors. Text can 
 
 We will start with the crucial parent element `<form>`. The form element wraps all the input elements that will collect our user information inside of it. The form element has two important attributes: action, and method. The `action` attribute will specify where the user information is sent to. This is typically the URL of a remote server. The second attribute is the `method` which will dictate the manner in which we submit our information. The most common HTTP methods are `GET`, `POST`, `PATCH`, `PUT`, and `DELETE` but for now we will focus on the most common two for form submissions `GET` and `POST`.
 
-#### POST
-
-```html
-<form action="process-user.php" method="post">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
-  <input type="submit" value="submit">
-</form>
-``` 
-
-![HTTP Post URL](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-post-url.png)
-
-![HTTP Post Headers](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-post-headers.png)
-
 #### GET
+
+Below we see the form example code for making a GET request.
 
 ```html
 <form action="process-user.php" method="get">
@@ -44,9 +32,36 @@ We will start with the crucial parent element `<form>`. The form element wraps a
 </form>
 ``` 
 
+When the user clicks the submit button of our form all their responses are captured and labled using the name attributes on each element. Then they are sent to the location listed in the action attribute in our case `process-user.php` The request uses the method attribute set as `get`. This causes the information to be sent as a Query String includded into the URL. The URL for our GET request looks like this,
+
 ![HTTP Get URL](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-get-url.png)
 
+By looking at the headers of our request in the Developer Tools > Network tab, we can see the request type listed as GET, and our users responses is located in Query String Parameters.
+
 ![HTTP Get Headers](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-get-headers.png)
+
+HTTP Get request is used when we want to get back particular content from the server and we want to pass it some options to refine the search of what we are getting back from the server. Since the content of our request is visible in the URL string at the top of the browser window, this is not really ideal for passwords, as the people looking over your shoulder at your favorite cafe might be able to read the contents of what your sending off your screen.
+
+#### POST
+
+Below we see the same form example code for making a POST request.
+
+```html
+<form action="process-user.php" method="post">
+  <input type="text" name="full-name">
+  <input type="password" name="password">
+  <input type="submit" value="submit">
+</form>
+``` 
+When the user clicks the submit button of our form all their responses are captured and labled using the name attributes on each element. Then they are sent to the location listed in the action attribute in our case `process-user.php` The request uses the method attribute set as `post`. This causes the information to be sent as Form Data that is passed along to our process-user.php file. The URL for our post request looks like this,
+
+![HTTP Post URL](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-post-url.png)
+
+By looking at the headers of our request in the Developer Tools > Network tab, we can see the request type listed as POST, and our users responses is tucked into the Form Data.
+
+![HTTP Post Headers](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-post-headers.png)
+
+HTTP Post request is ideally used when we wish to post content to the server. This is the more appropriate of the two methods for sending something like a password as the content is sent within Form Data and not directly visible in a query string in the URL as they are with GET requests.
 
 #### Text Inputs
 
