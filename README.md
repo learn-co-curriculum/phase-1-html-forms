@@ -6,9 +6,11 @@ In this lesson we will learn how to use HTML form elements to gather user input.
 
 ## Objectives
 
-1. ...
+1. Understand form elements get and post differences.
+2. Familiarization with form elements.
+3. A look at iframe code.
 
-## ...
+## Gathering User Input
 
 <iframe width="640" height="480" src="//www.youtube.com/embed/eiCtXc2YMKc?rel=0" frameborder="0" allowfullscreen></iframe>
 
@@ -173,10 +175,18 @@ Iframe elements allow us to link to other HTML content from within a frame windo
 
 ## Summary
 
-- ...
+- There are many options for gathering user input.
+- We can start with a form element and give it an sction and method.
+- The POST method posts content to a server tucking form data within the request.
+- The GET method sends form content as a set of options in the form of a query string visible in the browsers URL bar. The purpose is to describe to the server options for the content you wish to get back.
+- We can use an iframe element to display other HTML documents inside a frame within our own HTML document.
 
 ## Resources
 
 - [Presentation Slides](https://docs.google.com/presentation/d/115ECvsMyDnFBcc-Rvb4Jn876JhOycXxKVN6sv7OiJ1Y/edit?usp=sharing)
+- [MDN - HTML - Form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+- [MDN - HTML - Iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
+- [HTML Goodies - Form Basics](http://www.htmlgoodies.com/primers/html/article.php/3881421)
+- [HTML Form Generator](http://www.phpform.org/)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames' title='HTML Forms and Iframes'>HTML Forms and Iframes</a> on Learn.co and start learning to code for free.</p>
