@@ -176,7 +176,7 @@ Iframe elements allow us to link to other HTML content from within a frame windo
 ## Summary
 
 - There are many options for gathering user input.
-- We can start with a form element and give it an sction and method.
+- We can start with a form element and give it an action and method.
 - The POST method posts content to a server tucking form data within the request.
 - The GET method sends form content as a set of options in the form of a query string visible in the browsers URL bar. The purpose is to describe to the server options for the content you wish to get back.
 - We can use an iframe element to display other HTML documents inside a frame within our own HTML document.
@@ -190,3 +190,5 @@ Iframe elements allow us to link to other HTML content from within a frame windo
 - [HTML Form Generator](http://www.phpform.org/)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames' title='HTML Forms and Iframes'>HTML Forms and Iframes</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames'>HTML Forms and iFrames</a> on Learn.co and start learning to code for free.</p>
