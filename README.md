@@ -77,7 +77,7 @@ Setting the input element with a `type="text"` gives our user a place to type in
 
 <input type="text" name="username" placeholder="username">
 
-Setting the input element with a `type="password"` displays dots as the user types characters instead of the actual characters. This is useful when private information is entered that we don not want others around the user to read.
+Setting the input element with a `type="password"` displays dots as the user types characters instead of the actual characters. This is useful when private information is entered that we do not want others around the user to read.
 
 ```html
 <input type="password" name="password" placeholder="password">
