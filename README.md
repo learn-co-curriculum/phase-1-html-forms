@@ -42,7 +42,7 @@ By looking at the headers of our request in the Developer Tools > Network tab, w
 
 ![HTTP Get Headers](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-get-headers.png)
 
-HTTP Get request is used when we want to get back particular content from the server and we want to pass it some options to refine the search of what we are getting back from the server. Since the content of our request is visible in the URL string at the top of the browser window, this is not really ideal for passwords, as the people looking over your shoulder at your favorite cafe might be able to read the contents of what your sending off your screen.
+HTTP Get request is used when we want to get back particular content from the server and we want to pass it some options to refine the search of what we are getting back from the server. Since the content of our request is visible in the URL string at the top of the browser window, this is not really ideal for passwords, as the people looking over your shoulder at your favorite cafe might be able to read the contents of what you are sending off your screen.
 
 #### POST
 
@@ -192,3 +192,5 @@ Iframe elements allow us to link to other HTML content from within a frame windo
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames' title='HTML Forms and Iframes'>HTML Forms and Iframes</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames'>HTML Forms and iFrames</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames'>HTML Forms and iFrames</a> on Learn.co and start learning to code for free.</p>
