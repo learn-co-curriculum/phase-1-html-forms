@@ -137,7 +137,7 @@ Checkboxes are ideal if we wish to allow our user to choose one, another, or bot
 
 #### Select Menus
 
-Select menus create a nice drop menu which multiple selectable options. Here the user must also choose a single option, so this could be a replacement for a set of radio buttons. Here we must assign a text label between the opening and closing option elements as well as a `value` attribute that will hold the choice the user selects that will be passed along during form submission.
+Select menus create a nice drop menu with multiple selectable options. Here the user must also choose a single option, so this could be a replacement for a set of radio buttons. Here we must assign a text label between the opening and closing option elements as well as a `value` attribute that will hold the choice the user selects that will be passed along during form submission.
 
 ```html
 <select name="size">
