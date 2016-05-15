@@ -34,7 +34,7 @@ Below we see the form example code for making a GET request.
 </form>
 ``` 
 
-When the user clicks the submit button of our form all their responses are captured and labled using the name attributes on each element. Then they are sent to the location listed in the action attribute in our case `process-user.php` The request uses the method attribute set as `get`. This causes the information to be sent as a Query String included into the URL. The URL for our GET request looks like this,
+When the user clicks the submit button of our form all their responses are captured and labeled using the name attributes on each element. Then they are sent to the location listed in the action attribute in our case `process-user.php` The request uses the method attribute set as `get`. This causes the information to be sent as a Query String included into the URL. The URL for our GET request looks like this,
 
 ![HTTP Get URL](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-get-url.png)
 
