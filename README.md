@@ -55,7 +55,7 @@ Below we see the same form example code for making a POST request.
   <input type="submit" value="submit">
 </form>
 ``` 
-When the user clicks the submit button of our form all their responses are captured and labled using the name attributes on each element. Then they are sent to the location listed in the action attribute in our case `process-user.php` The request uses the method attribute set as `post`. This causes the information to be sent as Form Data that is passed along to our process-user.php file. The URL for our post request looks like this,
+When the user clicks the submit button of our form all their responses are captured and labeled using the name attributes on each element. Then they are sent to the location listed in the action attribute in our case `process-user.php` The request uses the method attribute set as `post`. This causes the information to be sent as Form Data that is passed along to our process-user.php file. The URL for our post request looks like this,
 
 ![HTTP Post URL](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-post-url.png)
 
