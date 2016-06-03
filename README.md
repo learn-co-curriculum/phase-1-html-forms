@@ -109,7 +109,17 @@ Setting the input element with a `type="submit"` will create a submission button
 <input type="submit" value="submit">
 ```
 
+You can also use a `button` element:
+
+```html
+<button type="submit">Value</button>
+```
+
+Note that with a `button`, the text that will appear on the button goes between the `<button>` and `</button>` tags.
+
 <input type="submit" value="submit">
+
+<button type="submit">Submit</button>
 
 #### Radio Inputs
 
@@ -186,11 +196,8 @@ Iframe elements allow us to link to other HTML content from within a frame windo
 - [Presentation Slides](https://docs.google.com/presentation/d/115ECvsMyDnFBcc-Rvb4Jn876JhOycXxKVN6sv7OiJ1Y/edit?usp=sharing)
 - [MDN - HTML - Form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 - [MDN - HTML - Iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
+- [MDN - HTML - Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 - [HTML Goodies - Form Basics](http://www.htmlgoodies.com/primers/html/article.php/3881421)
 - [HTML Form Generator](http://www.phpform.org/)
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames' title='HTML Forms and Iframes'>HTML Forms and Iframes</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames'>HTML Forms and iFrames</a> on Learn.co and start learning to code for free.</p>
-
+- 
 <p class='util--hide'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames'>HTML Forms and iFrames</a> on Learn.co and start learning to code for free.</p>
