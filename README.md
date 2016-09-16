@@ -115,7 +115,7 @@ You can also use a `button` element:
 <button type="submit">Value</button>
 ```
 
-Note that with a `button`, the text that will appear on the button goes between the `<button>` and `</button>` tags.
+Note that with a `button` element, the text that will appear on the button goes between the `<button>` and `</button>` tags.
 
 <input type="submit" value="submit">
 
@@ -135,7 +135,7 @@ Radio inputs are useful when you want to have several possible values but wish t
 
 #### Checkboxes 
 
-Checkboxes are ideal if we wish to allow our user to choose one, another, or both values.
+Checkboxes are ideal if we wish to allow our user to choose one or more values.
 
 ```html
 <input type="checkbox" name="vehicle-1" value="bike"> Bike <br>
@@ -165,7 +165,7 @@ Select menus create a nice drop menu with multiple selectable options. Here the 
 
 #### Textarea
 
-Textarea elements are useful if we wish to allow our user to insert multiple lines of text, for example if we wish to gather feedback that requires they can type as much or as little a response as they like.
+Textarea elements are useful if we wish to allow our user to insert multiple lines of text. For example, if we wish to gather feedback which requires our user to type as much or as little a response as they like.
 
 ```html
 <textarea name="message"></textarea>
@@ -175,7 +175,7 @@ Textarea elements are useful if we wish to allow our user to insert multiple lin
 
 ### Iframes
 
-Iframe elements allow us to link to other HTML content from within a frame window on our pages. The `src` attribute points to the location of other html content elsewhere and display it within the current page.
+Iframe elements allow us to link to other HTML content from within a frame window on our pages. The `src` attribute points to the location of other HTML content elsewhere and display it within the current page.
 
 ```html
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d335994.89219194185!2d2.0673752159642937!3d48.8589713267984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2sus!4v1457911182825" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -188,7 +188,7 @@ Iframe elements allow us to link to other HTML content from within a frame windo
 - There are many options for gathering user input.
 - We can start with a form element and give it an action and method.
 - The POST method posts content to a server tucking form data within the request.
-- The GET method sends form content as a set of options in the form of a query string visible in the browsers URL bar. The purpose is to describe to the server options for the content you wish to get back.
+- The GET method sends form content as a set of options in the form of a query string visible in the browser's URL bar. The purpose is to describe to the server options for the content you wish to get back.
 - We can use an iframe element to display other HTML documents inside a frame within our own HTML document.
 
 ## Resources
