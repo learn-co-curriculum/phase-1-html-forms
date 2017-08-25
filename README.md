@@ -20,7 +20,7 @@ In this lesson we will learn how to use HTML form elements to gather user input.
 
 Forms are essential for gathering user information from site visitors. Text can be inserted, selections made and a record of their responses can be sent remotely to a server whose backend can store the information. At this time we will not be going into detail about the back-end portion of a form submission, but instead focusing on the front-end portion. Let's explore some of the many form elements we have at our disposal for gathering user input.
 
-We will start with the crucial parent element `<form>`. The form element wraps all the input elements that will collect our user information inside of it. The form element has two important attributes: action, and method. The `action` attribute will specify where the user information is sent to. This is typically the URL of a remote server. The second attribute is the `method` which will dictate the manner in which we submit our information. The most common HTTP methods are `GET`, `POST`, `PATCH`, `PUT`, and `DELETE`, but for now we will focus on the most common two for form submissions: `GET` and `POST`.
+We will start with the crucial parent element `<form>`. The form element wraps all the input elements that will collect our users' information inside of it. The form element has two important attributes: action, and method. The `action` attribute will specify where the user information is sent to. This is typically the URL of a remote server. The second attribute is the `method` which will dictate the manner in which we submit our information. The most common HTTP methods are `GET`, `POST`, `PATCH`, `PUT`, and `DELETE`, but for now we will focus on the most common two for form submissions: `GET` and `POST`.
 
 #### GET
 
@@ -36,13 +36,13 @@ Below we see the form example code for making a GET request.
 
 When the user clicks the submit button of our form all their responses are captured and labeled using the name attributes on each element. Then they are sent to the location listed in the action attribute in our case `process-user.php` The request uses the method attribute set as `get`. This causes the information to be sent as a Query String included into the URL. The URL for our GET request looks like this,
 
-![HTTP Get URL](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-get-url.png)
+![HTTP GET URL](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-get-url.png)
 
-By looking at the headers of our request in the Developer Tools > Network tab, we can see the request type listed as GET, and our users responses is located in Query String Parameters.
+By looking at the headers of our request in the Developer Tools > Network tab, we can see the request type listed as GET, and our user's response is located in the Query String Parameters.
 
-![HTTP Get Headers](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-get-headers.png)
+![HTTP GET Headers](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-get-headers.png)
 
-HTTP Get request is used when we want to get back particular content from the server and we want to pass it some options to refine the search of what we are getting back from the server. Since the content of our request is visible in the URL string at the top of the browser window, this is not really ideal for passwords, as the people looking over your shoulder at your favorite cafe might be able to read the contents of what you are sending off your screen.
+An HTTP GET request is used when we want to get back particular content from the server and we want to pass it some options to refine the search of what we are getting back from the server. Since the content of our request is visible in the URL string at the top of the browser window, this is not really ideal for passwords, as the people looking over your shoulder at your favorite cafe might be able to read the contents of what you are sending off your screen.
 
 #### POST
 
@@ -59,7 +59,7 @@ When the user clicks the submit button of our form all their responses are captu
 
 ![HTTP Post URL](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-post-url.png)
 
-By looking at the headers of our request in the Developer Tools > Network tab, we can see the request type listed as POST, and our users responses is tucked into the Form Data.
+By looking at the headers of our request in the Developer Tools > Network tab, we can see the request type listed as POST, and our user's response is tucked into the Form Data.
 
 ![HTTP Post Headers](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-post-headers.png)
 
@@ -69,7 +69,7 @@ Next, let's explore some of the many form elements we can use to gather user inp
 
 #### Text Inputs
 
-Setting the input element with a `type="text"` gives our user a place to type in a single line of text content. The `placeholder` attribute puts some dummy text into the element that will be replaced as the user starts typing. The `name` attribute gives our input value a label. This makes it possible to grab its value at the other end on the server by calling up the value by giving its name (key).
+Setting the input element with a `type="text"` gives our users a place to type in a single line of text content. The `placeholder` attribute puts some dummy text into the element that will be replaced as the user starts typing. The `name` attribute gives our input value a label. This makes it possible to grab its value at the other end on the server by calling up the value by giving its name (key).
 
 ```html
 <input type="text" name="username" placeholder="username">
@@ -135,7 +135,7 @@ Radio inputs are useful when you want to have several possible values but wish t
 
 #### Checkboxes 
 
-Checkboxes are ideal if we wish to allow our user to choose one or more values.
+Checkboxes are ideal if we wish to allow our users to choose one or more values.
 
 ```html
 <input type="checkbox" name="vehicle-1" value="bike"> Bike <br>
@@ -165,7 +165,7 @@ Select menus create a nice drop menu with multiple selectable options. Here the 
 
 #### Textarea
 
-Textarea elements are useful if we wish to allow our user to insert multiple lines of text. For example, if we wish to gather feedback which requires our user to type as much or as little a response as they like.
+Textarea elements are useful if we want our users to be able to insert multiple lines of text. For example, if we wish to gather feedback in a way that allows the user to type as much or as little as they would like.
 
 ```html
 <textarea name="message"></textarea>
