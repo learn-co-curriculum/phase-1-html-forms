@@ -20,7 +20,7 @@ In this lesson we will learn how to use HTML form elements to gather user input.
 
 Forms are essential for gathering user information from site visitors. Text can be inserted, selections made and a record of their responses can be sent remotely to a server whose backend can store the information. At this time we will not be going into detail about the back-end portion of a form submission, but instead focusing on the front-end portion. Let's explore some of the many form elements we have at our disposal for gathering user input.
 
-We will start with the crucial parent element `<form>`. The form element wraps all the input elements that will collect our user information inside of it. The form element has two important attributes: action, and method. The `action` attribute will specify where the user information is sent to. This is typically the URL of a remote server. The second attribute is the `method` which will dictate the manner in which we submit our information. The most common HTTP methods are `GET`, `POST`, `PATCH`, `PUT`, and `DELETE` but for now we will focus on the most common two for form submissions `GET` and `POST`.
+We will start with the crucial parent element `<form>`. The form element wraps all the input elements that will collect our user information inside of it. The form element has two important attributes: action, and method. The `action` attribute will specify where the user information is sent to. This is typically the URL of a remote server. The second attribute is the `method` which will dictate the manner in which we submit our information. The most common HTTP methods are `GET`, `POST`, `PATCH`, `PUT`, and `DELETE`, but for now we will focus on the most common two for form submissions: `GET` and `POST`.
 
 #### GET
 
