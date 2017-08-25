@@ -85,7 +85,7 @@ Setting the input element with a `type="password"` displays dots as the user typ
 
 <input type="password" name="password" placeholder="password">
 
-Setting the input element with a `type="tel"` will bring up the numeric keypad on supporting mobile devices.
+Setting the input element with a `type="tel"` will bring up the numeric keypad on supported mobile devices.
 
 ```html
 <input type="tel" name="phone" placeholder="phone">
