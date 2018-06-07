@@ -217,7 +217,7 @@ attribute.
 <input type="radio" name="plays-well-with-others" value="medium"> It depends on the dog, but generally they are ok<br>
 <input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
 ```
-<h3>Does your dog get along with other dogs?<h3>
+<h3>Does your dog get along with other dogs?</h3>
 <input type="radio" name="plays-well-with-others" value="high"> The more dogs, the better!<br>
 <input type="radio" name="plays-well-with-others" value="medium"> It depends on the dog, but generally they are ok<br>
 <input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
