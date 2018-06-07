@@ -3,145 +3,166 @@
 ## Problem Statement
 
 Up until this point, all of the HTML elements that we've introduced are used to
-display data to the user. This is great, but what happens when we want to reach
-out to our users? Websites from personal blogs to business sites increase user
-interaction with newsletters, special offers, and exclusive content sent directly
-to the user. In the next few lessons and labs, you're the owner of a dog walking
-business that needs a way to keep in contact with current clients, and a way to
-connect with new clients. 
+display data to the user. This is great, but what happens when we want to _get_
+information from our users? In order to get user information we need to write
+HTML forms. We will learn to write HTML forms in this lesson.
 
 ## Objectives
 
-1. Understand get vs post
-2. Familiarization with form elements
+1. Define the purpose of a form
+2. Write an HTML form tag
+3. Define the `GET` vs `POST` HTTP methods
+4. Write HTML form data elements
 
-## Understanding Get vs. Post
+## Define The Purpose Of a Form
 
-### Forms
+Forms gather user information. Let's suppose that you're the owner of a dog
+walking business that needs a way to gather information from clients. You want
+to create an HTML form to collect information like:
 
-Forms are essential for gathering user information from site visitors. As the
-owner of a dog walking business, you can collect crucial information like
-owner's name and address, walking frequency, dog names and ages, and other
-details. Then, a record of their responses can be sent remotely to a server
-where the information is stored. (We're going to focus on the front-end part of
-the form submission for now.)
+* owner's name
+* owner's address
+* dog's name
+* dog's age
+* walking frequency
 
-### Form Tag
-We will start with the crucial parent element `<form>`. The form element wraps
-all the input elements that will collect our users' information inside of it.
-The form element has two important attributes: action, and method. 
+You can do this with HTML. When the owner fills out the form and clicks
+"Submit," a record of their responses will be sent to a server where the
+information can be stored and used for newsletters, promotions, and invitations
+to client-appreciation parties.
 
-The first attribute, `action`, will specify where the user information is sent.
-This is typically the URL of a remote server. 
+To process and store the information, we would need a language like Ruby, PHP,
+Java, or C++. We won't be covering that in this lesson. However, _all_ those
+languages are designed to receive the information sent by an HTML form.
 
-The second attribute, `method`, will dictate the manner in which we submit our
-information. The most common HTTP methods are `GET`, `POST`, `PATCH`, `PUT`, and
-`DELETE`, but for now we will focus on the most common two for form submissions:
-`GET` and `POST`.
+## Write An HTML Form Tag
 
-#### GET
+The crucial starting element is the `<form>` tag.  The form element wraps all
+the `input` elements that will collect our users' information inside of them.
+Examples of `input` elements are text fields, text areas, radio buttons,
+drop-down lists, and password fields. We will cover the `input` elements later
+in this lesson.
 
-Below we see the form example code for making a `GET` request.
+The first attribute, `action`, decides where the user information is sent.
+This is typically the URL of a remote server.
+
+The second attribute, method, sets the HTTP method the browser will use to send
+the user information to the server. You can think of "HTTP method" as being
+like an envelope type. Some envelopes are good for documents, other envelopes
+are good for confidential letters, others are good for international postage.
+The HTTP methods used in forms are GET and POST. Let's examine how the HTTP
+method changes the "envelope" around our users' information.
+
+## Define The `GET` vs. `POST` HTTP Methods
+
+### GET
+
+Below we see the `form` example code for making a `GET` request.
 
 ```html
-<form action="process-user.php" method="get">
+<form action="http://example.com/process-user.php" method="GET">
   <input type="text" name="owner-name">
   <input type="text" name="dog-name">
   <input type="text" name="favorite-toy">
   <input type="submit" value="submit">
 </form>
-``` 
+```
 
-When the user clicks the submit button of our form all their responses are
-captured and labeled using the name attributes on each element. Then they are
-sent to the location listed in the action attribute: `process-user.php`. The
-request uses the method attribute set as `GET`. This causes the information to
-be sent as a _query string_ (everything after the ?) included into the URL. The
-URL for our `GET` request looks like this:
+When the user clicks the submit button, their responses in the `input` fields
+are captured and labeled using the `name` attributes from each element. The
+browser temporarily stores this information like so:
 
-![HTTP GET URL](https://curriculum-content.s3.amazonaws.com/html-forms/html-forms-get-request.png)
+`owner-name=Bob+Barkley&dog-name=SirBarksALot&favorite-toy=ball`
 
-By looking at the headers of our request in the Developer Tools > Network tab,
-we can see the request type listed as `get`, and our user's response is located
-in the Query String Parameters.
+This is known as the _Query String_.  The browser _then_ attaches the _Query
+String_ onto the location listed in the `action` attribute after a `?` to
+create a URL that looks like this:
 
-![HTTP GET Headers](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-get-headers.png)
+`http://example.com/process-user.php?owner-name=Bob+Barkley&dog-name=SirBarksALot&favorite-toy=ball`
 
-An HTTP `GET` request is used when we want to get back particular content from
-the server and we want to pass it some options to refine the search of what we
-are getting back from the server. As you can see above, the content of our
-request is visible in the URL string at the top of the browser window. While
-this is a great method for things like search, this is not really ideal for
-passwords, as the people looking over your shoulder at your favorite park might
-be able to read the contents of what you are sending.
+The browser then goes to this new URL.
 
-#### POST
+The HTTP `GET` method is the default method for browsers to request material on
+the internet. When a _Query String_ is added, it's a **great** solution for
+filtering the information that comes back.  While this is a great method for
+things like search, this is not really ideal for passwords, as the people
+looking over your shoulder at your favorite park might be able to read the
+contents of what you are sending.
+
+When you need to send your response in a way that doesn't leak information, you
+want your form to use the `POST` HTTP method.
+
+### POST
 
 Below we see the same form example code for making a POST request.
 
 ```html
-<form action="process-user.php" method="post">
+<form action="http://example.com/process-user.php" method="POST">
   <input type="text" name="owner-name">
   <input type="text" name="dog-name">
   <input type="text" name="favorite-toy">
   <input type="submit" value="submit">
 </form>
-``` 
-When the user clicks the submit button of our form all their responses are
-captured and labeled using the name attributes on each element. Then they are
-sent to the location listed in the action attribute in our case
-`process-user.php` The request uses the method attribute set as `POST`. This
-causes the information to be sent as _form data_ that is passed along to our
-process-user.php file. The URL for our post request looks like this:
+```
 
-![HTTP Post URL](https://curriculum-content.s3.amazonaws.com/html-forms/html-forms-post-request.png)
+When the user clicks the submit button, their responses in the `input` fields
+are captured and labeled using the `name` attributes from each element. The
+browser temporarily stores this information like so:
 
-By looking at the headers of our request in the Developer Tools > Network tab,
-we can see the request type listed as `POST`, and our user's response is tucked
-into the form data.
+`owner-name=Bob+Barkley&dog-name=SirBarksALot&favorite-toy=ball`
 
-![HTTP Post Headers](http://ironboard-curriculum-content.s3.amazonaws.com/front-end/lab-assets/http-post-headers.png)
+A `POST` is like a secure envelope, we can't see the information being sent.
+That's why `POST` is the right call when sending sensitive information like
+passwords or national IDs. The user's browser **is not redirected** in this
+case.
 
-HTTP `POST` request is ideally used when we wish to post content to the server.
-This is the more appropriate of the two methods for sending something like a
-password as the content is sent within form data and not directly visible in a
-query string in the URL as they are with GET requests. Most forms should be set
-to a `POST` request, unless you specifically want the user to be able to see the
-query string. 
+Now that we know how to write a form tag and we understand the HTTP action that
+goes in its `action` attribute, let's talk about different ways we can ask for
+information within our `form`.
 
+## Write HTML Form Data Elements
 
-#### Text Inputs
+### Text Field Input
 
-Setting the input element with a `type="text"` gives our users a place to type
-in a single line of text content. The `placeholder` attribute puts some dummy
-text into the element that will be replaced as the user starts typing. The
-`name` attribute gives our input value a label. This makes it possible to grab
-its value at the other end on the server by calling up the value by giving its
-name, also known as a `key`).
+Creating an `input` tag with `type="text"` gives our users a place to type
+in a single line of text. It looks like this:
+
+`<input type="text" name="owner-name" placeholder="Full Name"> `
+
+The `placeholder` attribute puts some dummy text into the element that will be
+replaced as the user starts typing.  The `name` attribute gives our input a
+name.
 
 ```html
 <label for="owner-name">Owner Name</label>
 <input type="text" name="owner-name" placeholder="Full Name">
 ```
+
 <label for="owner-name">Owner Name</label>
 <input type="text" name="owner-name" placeholder="Full Name">
 
-Generally, HTML form attributes should not contain spaces. Exceptions to this
-rule are `placeholder` and `class`. If you're not sure whether or not your
-attribute can contain a space, check out [this article](https://www.htmlgoodies.com/primers/html/article.php/3881421).
+Generally, HTML form attributes should not contain spaces. Common exceptions to
+this rule are `placeholder` and `class`. If you're not sure whether or not your
+attribute can contain a space, check out [this article][article].
 
-##### A Note on Labels
-Have you ever been filling out a form that only had placeholder labels, and then
-totally forgotten what you're supposed to be writing in the box you're filling
-out? While labels are not strictly necessary on HTML forms, they can increase
-the usability and accessibility. You'll see labels in several examples here.
+### A Note on Labels
 
-#### Password inputs
+You might have noticed we sneaked an extra tag in, the `label` tag. When
+writing forms, we don't want to describe what goes in the form by using `p`
+tags. We can "tie" descriptive text to an input field using a `label` tag. The
+`name` attribute of the `input` is provided to the `label`'s `for` attribute
+and the browser knows to put them close to each other.
 
-Setting the input element with a `type="password"` is a special kind of text
-input. It displays dots as the user types characters, instead of the actual
-characters. This is useful when private information is entered, so your password
-isn't displayed for others to see.
+While labels are not strictly necessary on HTML forms, they increase the
+usability and accessibility for those using the web with assistive devices.
+It's the Right Thing to Do.
+
+### Password inputs
+
+Creating an `input` tag with `type="password"` gives our users a place to type
+information that will _not_ be displayed by the browser. Most of the time
+browsers put `*` or dots instead of the character.  This is useful when private
+information is entered, so your password isn't displayed for others to see.
 
 ```html
 <input type="password" name="password" placeholder="Enter your password here">
@@ -151,8 +172,8 @@ isn't displayed for others to see.
 
 #### Telephone inputs
 
-Setting the input element with a `type="tel"` will bring up the numeric keypad
-on supported mobile devices.
+Creating an `input` tag with `type="tel"` behaves like a text field, but will
+bring up the numeric keypad on supported mobile devices.
 
 ```html
 <input type="tel" name="phone" placeholder="Phone Number">
@@ -160,56 +181,23 @@ on supported mobile devices.
 
 <input type="tel" name="phone" placeholder="Phone Number">
 
-#### Hidden Input field
+#### Submit Tag
 
-Setting the input element with a `type="hidden"` will send the inserted `value`
-attributes data along with the form submission, but won't make the data visible
-in the browser window.
-
-```html
-<input type="hidden" name="id" value="UID-99298356982">
-```
-
-However, you can see the input field if you inspect the HTML, so be judicious
-where you use hidden fields. 
-
-#### Submit and Button Tags
-
-Both the submit and button inputs will allow the user to submit the information
-to your server. They come with different default styling, but generally the same
-behavior. Without a `submit` or `button` tag with a `type="submit"`, users will
-not be able to submit their information, and you'll lose a lot of potential
-clients!
-
-Setting the input element with a `type="submit"` will create a submission button
-that will submit the form when the user clicks it. The `value` attribute holds
-the text that will appear on the button.
+Creating an `input` tag with `type="submit"` creates a submission button that,
+when clicked, will send a users `form`.  The `value` attribute holds the text
+that will appear on the button.
 
 ```html
 <input type="submit" value="Let me walk your dog!">
 ```
 <input type="submit" value="Let me walk your dog!">
-
-You can also use a `button` element:
-
-```html
-<button type="submit">Time for walkies!</button>
-```
-<button type="submit">Time for walkies!</button>
-
-With a `button` element, the text that appears on the button goes between the
-`<button>` and `</button>` tags. Feel free to play around with how buttons are
-displayed! What happens if you put an image tag in between the button tags?
-Note: Remember to set the button tag to `type="submit"`! Some browsers will
-default to that behavior, but it's unpredictable, so it's better to set the type
-explicitly. 
 
 #### Radio Inputs
 
 Radio inputs are useful when you want to have several possible options, but only
 want the user to make one choice. To accomplish this, you set different `value`
 attributes for each radio button, but they _must_ have the same `name`
-attribute. 
+attribute.
 
 ```html
 <h3>Does your dog get along with other dogs?</h3>
@@ -222,7 +210,7 @@ attribute.
 <input type="radio" name="plays-well-with-others" value="medium"> It depends on the dog, but generally they are ok<br>
 <input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
 
-#### Checkboxes 
+#### Checkboxes
 
 Checkboxes are ideal if we wish to allow our users to choose one or more values.
 
@@ -286,16 +274,14 @@ like.
 <h3>Any other things we should know about your dog?</h3>
 <textarea name="message"></textarea>
 
-
 ## Summary
 
-There are many options for gathering user input. First, you start with a form
-element, then give it an action and method. The `POST` method posts content to a
-server tucking form data within the request, while the `GET` method sends form
-content as a set of options in the form of a query string visible in the
-browser's URL bar. When you are gathering form content, make sure that your user
-experience is clearly laid out and appropriately labeled, and soon you'll have
-all the clients you can handle!
+We use HTML `form`s to collect data from users. Start with a form element. Give
+it an `action` and `method`, probably `POST`.  Inside the `form` add several
+`input` elements.  You won't use them all, so don't try! Use the best `input`
+for the data you're requesting. Make sure that your `input`s are clearly
+labeled. If you follow these guidelines you'll soon be getting all the user
+data you can handle!
 
 ## Resources
 
@@ -305,5 +291,7 @@ all the clients you can handle!
 - [MDN - HTML - Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 - [HTML Goodies - Form Basics](http://www.htmlgoodies.com/primers/html/article.php/3881421)
 - [HTML Form Generator](http://www.phpform.org/)
-- 
+
 <p class='util--hide'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames'>HTML Forms and iFrames</a> on Learn.co and start learning to code for free.</p>
+
+[article]: https://www.htmlgoodies.com/primers/html/article.php/3881421
