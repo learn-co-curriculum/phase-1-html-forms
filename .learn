@@ -3,7 +3,6 @@ languages:
 tags:
   - form
   - input
-  - iframe
   - get
   - post
 type:
