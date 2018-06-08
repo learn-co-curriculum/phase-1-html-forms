@@ -110,7 +110,7 @@ the internet.
 
 Here, Amazon uses a `form` tag with `method` of `GET` to filter their *huge*
 store. They filter based on matches of the
-`<input type="text" name="field-keywords>`. We typed in "dog toys" into that
+`<input type="text" name="field-keywords">`. We typed in "dog toys" into that
 text field input.
 
 While this is a great method for things like search, this is bad for passwords,
