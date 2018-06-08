@@ -35,10 +35,10 @@ server where the information can be stored. Once the server has the information
 stored, it can be used to create newsletters, login accounts, or invitations to
 client-appreciation parties.
 
-To store and use the information, we need a language like Ruby, PHP, Java, or
-C++. We won't be covering storage and usage in this lesson. Writing code to
-handle things like that is "_back-end engineering_." All those languages are
-designed to receive the information sent by an HTML form.
+To store the information, we need a language like Ruby, PHP, or Java.
+We won't be covering storage and usage in this lesson. Writing code to handle
+things like that is "_back-end engineering_." All those languages are designed
+to receive the information sent by an HTML form.
 
 Let's write an HTML form. We'll use the `form` tag.
 
@@ -59,15 +59,15 @@ the word `input` when we use it here.
 
 The `form` tag's first attribute, `action`, decides where the user information
 is sent.  This is typically the URL of a remote server. This server will run
-the Ruby, PHP, Java, C++ code required to store the information the `form`
+the Ruby, PHP, or Java code required to store the information the `form`
 sends.
 
 The second attribute, `method`, sets the _HTTP method_ the browser will use to
 send the user information to the server. You can think of "HTTP method" as
-being like an envelope type. Some envelopes are good for documents, other
-envelopes are good for confidential letters, others are good for international
-mail.  The HTTP methods used in a forms are GET and POST. You'll learn more
-about how to choose if you start writing "back-end" code.
+being like an envelope type. Some envelopes are good for documents, others for
+confidential letters, and yet others are good for overseas mail. The HTTP
+methods used in a forms are GET and POST. You'll learn more about how to choose
+if you start writing "back-end" code.
 
 While you won't write the "back-end" code here, we'll describe what you see as
 a user when an HTML author chooses `GET` versus `POST`.
@@ -89,22 +89,22 @@ Below we see the `form` example code for making a `GET` request.
 
 When the user clicks the submit button, their responses in the `input` fields
 are captured and labeled using the `name` attributes from each element. The
-browser temporarily stores this information like so:
+browser stores this information behind the scenes like this:
 
 `owner-name=Bob+Barkley&dog-name=SirBarksALot&favorite-toy=ball`
 
 This is known as the _Query String_.  The browser _then_ attaches the _Query
 String_ onto the location listed in the `form`'s `action` attribute after a `?`
-to temporarily create a URL that looks like this:
+to create a URL that looks like this:
 
 `http://example.com/process-user.php?owner-name=Bob+Barkley&dog-name=SirBarksALot&favorite-toy=ball`
 
 The browser then goes to this new URL.
 
-The HTTP `GET` method is the default method for browsers to request material on
-the internet. When a _Query String_ is added, it's a **great** solution for
-filtering the information that comes back. You've probably seen this on the
-internet.
+When a _Query String_ is added to a URL, it's a **great** solution for
+filtering the information that comes back. Forms are a nice way for users to
+add those filters without typing them in by hand. You've probably seen this on
+the internet.
 
 ![Amazon Using a Form with GET]()
 
@@ -114,7 +114,7 @@ store. They filter based on matches of the
 text field input.
 
 While this is a great method for things like search, this is bad for passwords,
-obviously! A _Query String_ with `password=ByronIsBestPoodle` will stand out!
+obviously! A _Query String_ with `password=ByronBestPoodle` will stand out!
 When you need to send your response in a way that doesn't leak information, you
 want your form to use the `POST` HTTP method.
 
@@ -136,11 +136,11 @@ It's the same form you would write for a `GET`-method `form`, but with the
 
 When the user clicks the submit button, their responses in the `input` fields
 are captured and labeled using the `name` attributes from each element. The
-browser temporarily stores this information like so:
+browser stores this information like this:
 
 `owner-name=Bob+Barkley&dog-name=SirBarksALot&favorite-toy=ball`
 
-A `POST` is like a secure envelope, we can't see the information being sent.
+A `POST` is like a secure envelope. We can't see the information being sent.
 That's why `POST` is the right call when sending sensitive information like
 passwords or national IDs. The user's browser **is not redirected** in this
 case. We can't show you a screenshot of what this looks like because, well,
@@ -161,9 +161,9 @@ in a single line of text. It looks like this:
 
 `<input type="text" name="owner-name" placeholder="Full Name"> `
 
-The `placeholder` attribute puts some dummy text into the element that will be
-replaced as the user starts typing.  The `name` attribute gives our input a
-name.
+The `placeholder` attribute puts some dummy text into the element. That text
+will be replaced when the user starts filling it in.  The `name` attribute
+gives our input a name.
 
 ```html
 <label for="owner-name">Owner Name</label>
@@ -185,14 +185,13 @@ tags. We can "tie" descriptive text to an input field using a `label` tag. The
 `name` attribute of the `input` is provided to the `label`'s `for` attribute
 and the browser knows to put them close to each other.
 
-While labels are not strictly necessary on HTML forms, they increase the
-usability and accessibility for those using the web with assistive devices.
-It's the Right Thing to Do.
+Labels are not strictly necessary on HTML forms. They make our site better for
+those using assistive devices.  It's the Right Thing to Do.
 
 Why do we put _both_ labels _and_ placeholders? First, not all browsers and
-assistive devices support placeholder attributes. Additionally labels help
-assistive devices help users who need them more easily enter data. Again, it's
-part of our desire to create an inclusive and accessible web.
+assistive devices support placeholder attributes. Labels help assistive devices
+help users who need them more easily enter data. Again, it's part of our desire
+to create an inclusive and accessible web.
 
 ### Password Inputs
 
@@ -231,9 +230,9 @@ holds the text that will appear on the button.
 
 #### Radio Inputs
 
-Radio inputs are useful when you want to have several possible options, but the
-user is only allowed to pick one.  You will set different `value` attributes
-for each radio button, but they _must_ have the same `name` attribute.
+Radio inputs show users many options. But radio buttons allow users to select
+only one. You will set different `value` attributes for each radio button, but
+they _must_ have the same `name` attribute.
 
 ```html
 <h3>Does your dog get along with other dogs?</h3>
