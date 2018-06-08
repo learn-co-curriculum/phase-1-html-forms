@@ -106,7 +106,7 @@ filtering the information that comes back. Forms are a nice way for users to
 add those filters without typing them in by hand. You've probably seen this on
 the internet.
 
-![Amazon Using a Form with GET]()
+![Amazon Using a Form with GET](https://curriculum-content.s3.amazonaws.com/web-development/html-forms/amazon_get_request.png)
 
 Here, Amazon uses a `form` tag with `method` of `GET` to filter their *huge*
 store. They filter based on matches of the
