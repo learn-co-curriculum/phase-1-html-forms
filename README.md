@@ -118,6 +118,12 @@ obviously! A _Query String_ with `password=ByronBestPoodle` will stand out!
 When you need to send your response in a way that doesn't leak information, you
 want your form to use the `POST` HTTP method.
 
+> **ADVANCED**: An advanced concept is that a `GET` request is "idempotent."
+> That means the browser can run it repeatedly without changing information on
+> the back-end. We can ask for a filtered list of dog toys again and again and
+> again by hitting Refresh again and again and again. Nothing changes on the
+> server if we do that.
+
 ### POST
 
 Below we see the same form example code for making a POST request.
@@ -147,6 +153,12 @@ case. We can't show you a screenshot of what this looks like because, well,
 there's nothing to show. Usually after a successful POST, the web site will
 send you to a page that says "Thanks for your purchase" or "Thanks for joining
 our site."
+
+> **ADVANCED**: An advanced concept is that a `POST` request is **not**
+> "idempotent." If the browser runs it repeatedly, it **will** change data on
+> the back end. Submitting payment for a credit card is **not** idempotent.
+> Each refresh will take money out of your bank account! That's why many
+> finance sites say "Don't refresh this page while we process your request."
 
 Now that we know how to write a `form` tag and we understand the HTTP action
 that goes in its `action` attribute, let's talk about different ways we can ask
