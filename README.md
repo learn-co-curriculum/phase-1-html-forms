@@ -229,7 +229,7 @@ Here's a screenshot:
 
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/password_input.png" alt="Image of password input">
 
-#### Telephone Inputs
+### Telephone Inputs
 
 Creating an `input` tag with `type="tel"` behaves like a text field, but will
 bring up the numeric keypad on supported mobile devices.
@@ -244,7 +244,7 @@ Here's a screenshot:
 
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/tel_input.png" alt="Image of tel input">
 
-#### Submit Inputs
+### Submit Inputs
 
 Creating an `input` tag with `type="submit"` creates a submit button that, when
 clicked, will do something with a user's `form` data.  The `value` attribute
@@ -259,7 +259,7 @@ Here's a screenshot:
 
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/submit_input.png" alt="Image of submit input">
 
-#### Radio Inputs
+### Radio Inputs
 
 Radio inputs show users many options. But radio buttons allow users to select
 only one. You will set different `value` attributes for each radio button, but
@@ -277,7 +277,7 @@ Here's a screenshot:
 
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/radio_input.png" alt="Image of radio input">
 
-#### Checkboxes
+### Checkboxes
 
 Checkboxes are like radio buttons...but you can choose more than one.
 
@@ -295,7 +295,7 @@ Here's a screenshot:
 
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/checkbox_input.png" alt="Image of the checkbox input">
 
-#### Select Menus
+### Select Menus
 
 This is pretty advanced!
 
@@ -319,7 +319,7 @@ Here's a screenshot:
 
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/select_input.png" alt="Image of select input">
 
-#### Textarea
+### Textarea
 
 Textarea elements are useful if we want our users to be able to be able to write
 multiple lines of text. For example, if we wish to allow our clients to write
