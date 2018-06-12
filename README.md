@@ -187,6 +187,8 @@ The `placeholder` attribute puts some dummy text into the element. That text
 will be replaced when the user starts filling it in.  The `name` attribute
 gives our input a name.
 
+Here's a screenshot:
+
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textfield_input.png" alt="Image of textfield input">
 
 Generally, HTML form attributes should not contain spaces. Common exceptions to
@@ -222,6 +224,9 @@ information is entered, so your password isn't displayed for others to see.
 <input type="password" name="password" placeholder="Enter your password here">
 ```
 
+
+Here's a screenshot:
+
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/password_input.png" alt="Image of password input">
 
 #### Telephone Inputs
@@ -234,6 +239,9 @@ bring up the numeric keypad on supported mobile devices.
 <input type="tel" name="phone" placeholder="Phone Number">
 ```
 
+
+Here's a screenshot:
+
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/tel_input.png" alt="Image of tel input">
 
 #### Submit Inputs
@@ -245,6 +253,9 @@ holds the text that will appear on the button.
 ```html
 <input type="submit" value="Let me walk your dog!">
 ```
+
+
+Here's a screenshot:
 
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/submit_input.png" alt="Image of submit input">
 
@@ -261,6 +272,9 @@ they _must_ have the same `name` attribute.
 <input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
 ```
 
+
+Here's a screenshot:
+
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/radio_input.png" alt="Image of radio input">
 
 #### Checkboxes
@@ -275,6 +289,9 @@ Checkboxes are like radio buttons...but you can choose more than one.
 <input type="checkbox" name="toy-4" value="squeaky-toys">Squeaky Toys<br>
 <input type="checkbox" name="toy-5" value="balls">Balls, Frisbees, anything a dog can fetch!<br>
 ```
+
+
+Here's a screenshot:
 
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/checkbox_input.png" alt="Image of the checkbox input">
 
@@ -297,6 +314,9 @@ String_. For the example below the _Query String_ would contain `size="small"`.
 </select>
 ```
 
+
+Here's a screenshot:
+
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/select_input.png" alt="Image of select input">
 
 #### Textarea
@@ -310,6 +330,9 @@ like.
 <h3>Any other things we should know about your dog?</h3>
 <textarea name="message"></textarea>
 ```
+
+
+Here's a screenshot:
 
 <img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textarea_input.png" alt="Image of textarea input">
 
