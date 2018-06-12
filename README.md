@@ -191,8 +191,7 @@ gives our input a name.
 <input type="text" name="owner-name" placeholder="Full Name">
 ```
 
-<label for="owner-name">Owner Name</label>
-<input type="text" name="owner-name" placeholder="Full Name">
+PLACEHOLDER
 
 Generally, HTML form attributes should not contain spaces. Common exceptions to
 this rule are `placeholder` and `class`. If you're not sure whether or not your
@@ -223,10 +222,11 @@ browsers put `*` or dots instead of the character.  This is useful when private
 information is entered, so your password isn't displayed for others to see.
 
 ```html
+<label for="password">What's the password?</label>
 <input type="password" name="password" placeholder="Enter your password here">
 ```
 
-<input type="password" name="password" placeholder="Enter your password here">
+PLACEHOLDER
 
 #### Telephone Inputs
 
@@ -234,10 +234,11 @@ Creating an `input` tag with `type="tel"` behaves like a text field, but will
 bring up the numeric keypad on supported mobile devices.
 
 ```html
+<label for="tel">Where should E.T. &trade; Phone Home?</label>
 <input type="tel" name="phone" placeholder="Phone Number">
 ```
 
-<input type="tel" name="phone" placeholder="Phone Number">
+PLACEHOLDER
 
 #### Submit Inputs
 
@@ -248,7 +249,8 @@ holds the text that will appear on the button.
 ```html
 <input type="submit" value="Let me walk your dog!">
 ```
-<input type="submit" value="Let me walk your dog!">
+
+PLACEHOLDER
 
 #### Radio Inputs
 
@@ -262,10 +264,8 @@ they _must_ have the same `name` attribute.
 <input type="radio" name="plays-well-with-others" value="medium"> It depends on the dog, but generally they are ok<br>
 <input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
 ```
-<h3>Does your dog get along with other dogs?</h3>
-<input type="radio" name="plays-well-with-others" value="high"> The more dogs, the better!<br>
-<input type="radio" name="plays-well-with-others" value="medium"> It depends on the dog, but generally they are ok<br>
-<input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
+
+PLACEHOLDER
 
 #### Checkboxes
 
@@ -280,12 +280,7 @@ Checkboxes are like radio buttons...but you can choose more than one.
 <input type="checkbox" name="toy-5" value="balls">Balls, Frisbees, anything a dog can fetch!<br>
 ```
 
-<h3>What are your dogs favorite toys?</h3>
-<input type="checkbox" name="toy-1" value="kong"> Kong <br>
-<input type="checkbox" name="toy-2" value="stuffed-animals">Stuffed Animals<br>
-<input type="checkbox" name="toy-3" value="rope-toys">Rope Toys<br>
-<input type="checkbox" name="toy-4" value="squeaky-toys">Squeaky Toys<br>
-<input type="checkbox" name="toy-5" value="balls">Balls, Frisbees, anything a dog can fetch!<br>
+PLACEHOLDER
 
 #### Select Menus
 
@@ -306,13 +301,7 @@ String_. For the example below the _Query String_ would contain `size="small"`.
 </select>
 ```
 
-<h3>What size is your dog?</h3>
-<select name="size">
-  <option value="small" selected>Small(0-25 pounds)</option>
-  <option value="medium">Medium (26-50 pounds)</option>
-  <option value="large">Large (51-75 pounds)</option>
-  <option value="x-large">Extra Large (over 75 pounds)</option>
-</select>
+PLACEHOLDER
 
 #### Textarea
 
@@ -326,8 +315,7 @@ like.
 <textarea name="message"></textarea>
 ```
 
-<h3>Any other things we should know about your dog?</h3>
-<textarea name="message"></textarea>
+PLACEHOLDER
 
 ## Summary
 
