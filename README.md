@@ -14,7 +14,7 @@ We will learn to write them in this lesson.
 3. Define the `GET` vs `POST` HTTP methods
 4. Write HTML `form` data elements
 
-## Define The Purpose Of a Form
+## State The Purpose Of a Form
 
 Forms gather user information. They're just like surveys you might fill out at
 a supermarket or a questionnaire you'd fill out at the doctor's office.
@@ -29,16 +29,20 @@ information like:
 * dog's age
 * walking frequency
 
-You could ask for this information with an HTML form. When the owner fills out
-the form and clicks "Submit," a record of their responses will be sent to a
-server where the information can be stored. Once the server has the information
-stored, it can be used to create newsletters, login accounts, or invitations to
+You collect this information in HTML tags called `input`s located within the
+`form` tag. You will also code a "Submit" button so the client can say "OK! I'm
+done!." We'll discuss `input`s in more detail below.
+
+When the owner fills out the form's inputs and clicks "Submit," a record of
+their responses will be sent to a server where the information can be stored.
+Once the server has the information stored, software can be written to use the
+server's information to create newsletters, login accounts, or invitations to
 client-appreciation parties.
 
-To store the information, we need a language like Ruby, PHP, or Java.
-We won't be covering storage and usage in this lesson. Writing code to handle
-things like that is "_back-end engineering_." All those languages are designed
-to receive the information sent by an HTML form.
+To store the information, we need a language like Ruby, PHP, or Java.  We won't
+be covering storage and usage in this lesson. Writing code to handle things
+like that is "_back-end engineering_." Luckily, all those languages are
+designed to receive the information sent by an HTML `form`.
 
 Let's write an HTML form. We'll use the `form` tag.
 
@@ -46,28 +50,19 @@ Let's write an HTML form. We'll use the `form` tag.
 
 The starting element in an HTML form is the `<form>` tag.  The `form` element
 wraps all the `input` elements that will collect our users' information inside
-of them. But what's an `input`?
-
-Think about a doctor's questionnaire: sometimes they ask you to
-fill-in-the-blank, sometimes they ask for you to check checkboxes next to
-symptoms, other times they ask you to write a short answer. They ask all these
-different _types_ of questions within the same questionnaire or _form_. All of
-those types of prompts have a twin in an HTML `input`. A fill-in-the-blank is
-an `<input type="text">`. A short essay's twin is `<input type="textarea">`.
-We'll cover these inputs later in this lesson, but we want you to understand
-the word `input` when we use it here.
+of them. We will cover `input` elements in great detail after finishing
+discussing the attributes within a `form` tag.
 
 The `form` tag's first attribute, `action`, decides where the user information
-is sent.  This is typically the URL of a remote server. This server will run
-the Ruby, PHP, or Java code required to store the information the `form`
+is sent.  This is typically the URL of a server. This server will run the Ruby,
+PHP, or Java (or other!) code required to store the information the `form`
 sends.
 
 The second attribute, `method`, sets the _HTTP method_ the browser will use to
 send the user information to the server. You can think of "HTTP method" as
-being like an envelope type. Some envelopes are good for documents, others for
-confidential letters, and yet others are good for overseas mail. The HTTP
-methods used in a forms are GET and POST. You'll learn more about how to choose
-if you start writing "back-end" code.
+being like an envelope type. Some envelopes are good for documents, others are
+good for confidential letters, and yet others are good for overseas mail. The
+_HTTP methods_ used in a forms are `GET` and `POST`.
 
 While you won't write the "back-end" code here, we'll describe what you see as
 a user when an HTML author chooses `GET` versus `POST`.
@@ -99,7 +94,9 @@ to create a URL that looks like this:
 
 `http://example.com/process-user.php?owner-name=Bob+Barkley&dog-name=SirBarksALot&favorite-toy=ball`
 
-The browser then goes to this new URL.
+The browser then goes to this new URL. The server then uses _back-end
+programming_ to use the information in the _Query String_ to change what it
+will show.
 
 When a _Query String_ is added to a URL, it's a **great** solution for
 filtering the information that comes back. Forms are a nice way for users to
@@ -138,7 +135,7 @@ Below we see the same form example code for making a POST request.
 ```
 
 It's the same form you would write for a `GET`-method `form`, but with the
-`method` attribute changed. HTML tries to be easy.
+`method` attribute changed.
 
 When the user clicks the submit button, their responses in the `input` fields
 are captured and labeled using the `name` attributes from each element. The
@@ -162,9 +159,21 @@ our site."
 
 Now that we know how to write a `form` tag and we understand the HTTP action
 that goes in its `action` attribute, let's talk about different ways we can ask
-for information within our `form`.
+for information within our `form` by choosing the right `input`.
 
 ## Write HTML Form Data Elements
+
+What _is_ an `input`?
+
+Think about a doctor's questionnaire: sometimes they ask you to
+fill-in-the-blank, sometimes they ask you to mark checkboxes next to symptoms,
+and other times they ask you to write a short answer. They ask all these
+different _types_ of questions within the same questionnaire or _form_. All of
+those types of questionnaire prompts have a cousin in an HTML `input`. A
+fill-in-the-blank is an `<input type="text">`. A short essay's twin is `<input
+type="textarea">`.
+
+The rest of this lesson will be spent introducing you to the `input` elements.
 
 ### Text Field Input
 
@@ -193,12 +202,13 @@ attribute can contain a space, check out [this article][article].
 
 You might have noticed we sneaked an extra tag in, the `label` tag. When
 writing forms, we don't want to describe what goes in the form by using `p`
-tags. We can "tie" descriptive text to an input field using a `label` tag. The
-`name` attribute of the `input` is provided to the `label`'s `for` attribute
-and the browser knows to put them close to each other.
+tags. We can more meaningfully "tie" descriptive text (that is, a label) to an
+input field using the `label` tag. The `name` attribute of the `input` is
+provided to the `label`'s `for` attribute and the browser knows to put them
+close to each other.
 
-Labels are not strictly necessary on HTML forms. They make our site better for
-those using assistive devices.  It's the Right Thing to Do.
+Labels are not strictly necessary on HTML forms. **But** they make our site
+better for those using assistive devices.  It's the Right Thing to Do.
 
 Why do we put _both_ labels _and_ placeholders? First, not all browsers and
 assistive devices support placeholder attributes. Labels help assistive devices
