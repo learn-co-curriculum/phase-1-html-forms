@@ -1,5 +1,6 @@
 # HTML Forms
 
+
 ## Problem Statement
 
 Up to this point, all of the HTML elements we've seen are used to display data
@@ -186,13 +187,9 @@ The `placeholder` attribute puts some dummy text into the element. That text
 will be replaced when the user starts filling it in.  The `name` attribute
 gives our input a name.
 
-```html
-<label for="owner-name">Owner Name</label>
-<input type="text" name="owner-name" placeholder="Full Name">
-```
+Here's a screenshot:
 
-<label for="owner-name">Owner Name</label>
-<input type="text" name="owner-name" placeholder="Full Name">
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textfield_input.png" alt="Image of textfield input">
 
 Generally, HTML form attributes should not contain spaces. Common exceptions to
 this rule are `placeholder` and `class`. If you're not sure whether or not your
@@ -223,23 +220,31 @@ browsers put `*` or dots instead of the character.  This is useful when private
 information is entered, so your password isn't displayed for others to see.
 
 ```html
+<label for="password">What's the password?</label>
 <input type="password" name="password" placeholder="Enter your password here">
 ```
 
-<input type="password" name="password" placeholder="Enter your password here">
 
-#### Telephone Inputs
+Here's a screenshot:
+
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/password_input.png" alt="Image of password input">
+
+### Telephone Inputs
 
 Creating an `input` tag with `type="tel"` behaves like a text field, but will
 bring up the numeric keypad on supported mobile devices.
 
 ```html
+<label for="tel">Where should E.T. &trade; Phone Home?</label>
 <input type="tel" name="phone" placeholder="Phone Number">
 ```
 
-<input type="tel" name="phone" placeholder="Phone Number">
 
-#### Submit Inputs
+Here's a screenshot:
+
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/tel_input.png" alt="Image of tel input">
+
+### Submit Inputs
 
 Creating an `input` tag with `type="submit"` creates a submit button that, when
 clicked, will do something with a user's `form` data.  The `value` attribute
@@ -248,9 +253,13 @@ holds the text that will appear on the button.
 ```html
 <input type="submit" value="Let me walk your dog!">
 ```
-<input type="submit" value="Let me walk your dog!">
 
-#### Radio Inputs
+
+Here's a screenshot:
+
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/submit_input.png" alt="Image of submit input">
+
+### Radio Inputs
 
 Radio inputs show users many options. But radio buttons allow users to select
 only one. You will set different `value` attributes for each radio button, but
@@ -262,12 +271,13 @@ they _must_ have the same `name` attribute.
 <input type="radio" name="plays-well-with-others" value="medium"> It depends on the dog, but generally they are ok<br>
 <input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
 ```
-<h3>Does your dog get along with other dogs?</h3>
-<input type="radio" name="plays-well-with-others" value="high"> The more dogs, the better!<br>
-<input type="radio" name="plays-well-with-others" value="medium"> It depends on the dog, but generally they are ok<br>
-<input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
 
-#### Checkboxes
+
+Here's a screenshot:
+
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/radio_input.png" alt="Image of radio input">
+
+### Checkboxes
 
 Checkboxes are like radio buttons...but you can choose more than one.
 
@@ -280,14 +290,12 @@ Checkboxes are like radio buttons...but you can choose more than one.
 <input type="checkbox" name="toy-5" value="balls">Balls, Frisbees, anything a dog can fetch!<br>
 ```
 
-<h3>What are your dogs favorite toys?</h3>
-<input type="checkbox" name="toy-1" value="kong"> Kong <br>
-<input type="checkbox" name="toy-2" value="stuffed-animals">Stuffed Animals<br>
-<input type="checkbox" name="toy-3" value="rope-toys">Rope Toys<br>
-<input type="checkbox" name="toy-4" value="squeaky-toys">Squeaky Toys<br>
-<input type="checkbox" name="toy-5" value="balls">Balls, Frisbees, anything a dog can fetch!<br>
 
-#### Select Menus
+Here's a screenshot:
+
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/checkbox_input.png" alt="Image of the checkbox input">
+
+### Select Menus
 
 This is pretty advanced!
 
@@ -306,15 +314,12 @@ String_. For the example below the _Query String_ would contain `size="small"`.
 </select>
 ```
 
-<h3>What size is your dog?</h3>
-<select name="size">
-  <option value="small" selected>Small(0-25 pounds)</option>
-  <option value="medium">Medium (26-50 pounds)</option>
-  <option value="large">Large (51-75 pounds)</option>
-  <option value="x-large">Extra Large (over 75 pounds)</option>
-</select>
 
-#### Textarea
+Here's a screenshot:
+
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/select_input.png" alt="Image of select input">
+
+### Textarea
 
 Textarea elements are useful if we want our users to be able to be able to write
 multiple lines of text. For example, if we wish to allow our clients to write
@@ -326,8 +331,10 @@ like.
 <textarea name="message"></textarea>
 ```
 
-<h3>Any other things we should know about your dog?</h3>
-<textarea name="message"></textarea>
+
+Here's a screenshot:
+
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textarea_input.png" alt="Image of textarea input">
 
 ## Summary
 
