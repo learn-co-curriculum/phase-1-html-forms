@@ -59,7 +59,7 @@ PHP, or Java (or other!) code required to store the information the `form`
 sends.
 
 The second attribute, `method`, sets the _HTTP method_ the browser will use to
-send the user information to the server. You can think of "HTTP method" as
+send the user information to the server. You can think of "_HTTP method_" as
 being like an envelope type. Some envelopes are good for documents, others are
 good for confidential letters, and yet others are good for overseas mail. The
 _HTTP methods_ used in a forms are `GET` and `POST`.
@@ -113,7 +113,7 @@ text field input.
 While this is a great method for things like search, this is bad for passwords,
 obviously! A _Query String_ with `password=ByronBestPoodle` will stand out!
 When you need to send your response in a way that doesn't leak information, you
-want your form to use the `POST` HTTP method.
+want your form to use the `POST` _HTTP method_.
 
 > **ADVANCED**: An advanced concept is that a `GET` request is "idempotent."
 > That means the browser can run it repeatedly without changing information on
