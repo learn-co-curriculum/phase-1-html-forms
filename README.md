@@ -1,5 +1,6 @@
 # HTML Forms
 
+
 ## Problem Statement
 
 Up to this point, all of the HTML elements we've seen are used to display data
@@ -186,12 +187,7 @@ The `placeholder` attribute puts some dummy text into the element. That text
 will be replaced when the user starts filling it in.  The `name` attribute
 gives our input a name.
 
-```html
-<label for="owner-name">Owner Name</label>
-<input type="text" name="owner-name" placeholder="Full Name">
-```
-
-PLACEHOLDER
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textfield_input.png" alt="Image of textfield input">
 
 Generally, HTML form attributes should not contain spaces. Common exceptions to
 this rule are `placeholder` and `class`. If you're not sure whether or not your
@@ -226,7 +222,7 @@ information is entered, so your password isn't displayed for others to see.
 <input type="password" name="password" placeholder="Enter your password here">
 ```
 
-PLACEHOLDER
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/password_input.png" alt="Image of password input">
 
 #### Telephone Inputs
 
@@ -238,7 +234,7 @@ bring up the numeric keypad on supported mobile devices.
 <input type="tel" name="phone" placeholder="Phone Number">
 ```
 
-PLACEHOLDER
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/tel_input.png" alt="Image of tel input">
 
 #### Submit Inputs
 
@@ -250,7 +246,7 @@ holds the text that will appear on the button.
 <input type="submit" value="Let me walk your dog!">
 ```
 
-PLACEHOLDER
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/submit_input.png" alt="Image of submit input">
 
 #### Radio Inputs
 
@@ -265,7 +261,7 @@ they _must_ have the same `name` attribute.
 <input type="radio" name="plays-well-with-others" value="low"> My dog prefers their walkies solo<br>
 ```
 
-PLACEHOLDER
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/radio_input.png" alt="Image of radio input">
 
 #### Checkboxes
 
@@ -280,7 +276,7 @@ Checkboxes are like radio buttons...but you can choose more than one.
 <input type="checkbox" name="toy-5" value="balls">Balls, Frisbees, anything a dog can fetch!<br>
 ```
 
-PLACEHOLDER
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/checkbox_input.png" alt="Image of the checkbox input">
 
 #### Select Menus
 
@@ -301,7 +297,7 @@ String_. For the example below the _Query String_ would contain `size="small"`.
 </select>
 ```
 
-PLACEHOLDER
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/select_input.png" alt="Image of select input">
 
 #### Textarea
 
@@ -315,7 +311,7 @@ like.
 <textarea name="message"></textarea>
 ```
 
-PLACEHOLDER
+<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textarea_input.png" alt="Image of textarea input">
 
 ## Summary
 
