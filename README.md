@@ -31,7 +31,7 @@ information like:
 
 You collect this information in HTML tags called `input`s located within the
 `form` tag. You will also code a "Submit" button so the client can say "OK! I'm
-done!." We'll discuss `input`s in more detail below.
+done!" We'll discuss `input`s in more detail below.
 
 When the owner fills out the form's inputs and clicks "Submit," a record of
 their responses will be sent to a server where the information can be stored.
