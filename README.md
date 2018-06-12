@@ -62,7 +62,7 @@ The second attribute, `method`, sets the _HTTP method_ the browser will use to
 send the user information to the server. You can think of "_HTTP method_" as
 being like an envelope type. Some envelopes are good for documents, others are
 good for confidential letters, and yet others are good for overseas mail. The
-_HTTP methods_ used in a forms are `GET` and `POST`.
+_HTTP methods_ used in forms are `GET` and `POST`.
 
 While you won't write the "back-end" code here, we'll describe what you see as
 a user when an HTML author chooses `GET` versus `POST`.
