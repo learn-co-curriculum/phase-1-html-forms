@@ -236,7 +236,7 @@ bring up the numeric keypad on supported mobile devices.
 
 ```html
 <label for="tel">Where should E.T. &trade; Phone Home?</label>
-<input type="tel" name="phone" placeholder="Phone Number">
+<input id="tel" type="tel" name="phone" placeholder="Phone Number">
 ```
 
 
