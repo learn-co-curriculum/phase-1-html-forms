@@ -200,7 +200,7 @@ attribute can contain a space, check out [this article][article].
 You might have noticed we sneaked an extra tag in, the `label` tag. When
 writing forms, we don't want to describe what goes in the form by using `p`
 tags. We can more meaningfully "tie" descriptive text (that is, a label) to an
-input field using the `label` tag. The `name` attribute of the `input` is
+input field using the `label` tag. The `id` attribute of the `input` is
 provided to the `label`'s `for` attribute and the browser knows to put them
 close to each other.
 
@@ -221,7 +221,7 @@ information is entered, so your password isn't displayed for others to see.
 
 ```html
 <label for="password">What's the password?</label>
-<input type="password" name="password" placeholder="Enter your password here">
+<input type="password" id="password" name="password" placeholder="Enter your password here">
 ```
 
 
