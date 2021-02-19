@@ -189,7 +189,7 @@ gives our input a name.
 
 Here's a screenshot:
 
-<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textfield_input.png" alt="Image of textfield input">
+![Image of textfield input](https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textfield_input.png)
 
 Generally, HTML form attributes should not contain spaces. Common exceptions to
 this rule are `placeholder` and `class`. If you're not sure whether or not your
@@ -227,7 +227,7 @@ information is entered, so your password isn't displayed for others to see.
 
 Here's a screenshot:
 
-<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/password_input.png" alt="Image of password input">
+![Image of password input](https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/password_input.png)
 
 ### Telephone Inputs
 
@@ -242,7 +242,7 @@ bring up the numeric keypad on supported mobile devices.
 
 Here's a screenshot:
 
-<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/tel_input.png" alt="Image of tel input">
+![Image of tel input](https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/tel_input.png)
 
 ### Submit Inputs
 
@@ -257,7 +257,7 @@ holds the text that will appear on the button.
 
 Here's a screenshot:
 
-<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/submit_input.png" alt="Image of submit input">
+![Image of submit input](https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/submit_input.png)
 
 ### Radio Inputs
 
@@ -275,7 +275,7 @@ they _must_ have the same `name` attribute.
 
 Here's a screenshot:
 
-<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/radio_input.png" alt="Image of radio input">
+![Image of radio input](https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/radio_input.png)
 
 ### Checkboxes
 
@@ -293,7 +293,7 @@ Checkboxes are like radio buttons...but you can choose more than one.
 
 Here's a screenshot:
 
-<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/checkbox_input.png" alt="Image of the checkbox input">
+![Image of the checkbox input](https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/checkbox_input.png)
 
 ### Select Menus
 
@@ -317,7 +317,7 @@ String_. For the example below the _Query String_ would contain `size="small"`.
 
 Here's a screenshot:
 
-<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/select_input.png" alt="Image of select input">
+![Image of select input](https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/select_input.png)
 
 ### Textarea
 
@@ -334,7 +334,7 @@ like.
 
 Here's a screenshot:
 
-<img src="https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textarea_input.png" alt="Image of textarea input">
+![Image of textarea input](https://curriculum-content.s3.amazonaws.com/web-development/fewds-html-forms/textarea_input.png)
 
 ## Summary
 
@@ -353,6 +353,5 @@ you'll soon be getting all the user data you can handle!
 - [HTML Goodies - Form Basics](http://www.htmlgoodies.com/primers/html/article.php/3881421)
 - [HTML Form Generator](http://www.phpform.org/)
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/HTML-Forms-and-iFrames'>HTML Forms and iFrames</a> on Learn.co and start learning to code for free.</p>
 
 [article]: https://www.htmlgoodies.com/primers/html/article.php/3881421
