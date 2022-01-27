@@ -357,7 +357,9 @@ you'll soon be getting all the user data you can handle!
 
 - [MDN - HTML - Form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 - [MDN - HTML - Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
-- [HTML Goodies - Form Basics](http://www.htmlgoodies.com/primers/html/article.php/3881421)
+- [HTML Goodies - How to Build Forms Part 1](https://www.htmlgoodies.com/html/build-web-forms-html/)
+- [HTML Goodies - How to Build Forms Part 2](https://www.htmlgoodies.com/html/building-web-forms-part-2/)
+- [W3School - HTML Form Attributes](https://www.w3schools.com/html/html_forms_attributes.asp)
 - [HTML Form Generator](http://www.phpform.org/)
 
-[article]: https://www.htmlgoodies.com/primers/html/article.php/3881421
+[article]: https://www.w3schools.com/html/html_forms_attributes.asp
