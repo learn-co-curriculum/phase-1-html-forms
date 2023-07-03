@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Forms</title>
+</head>
+<body>
+  <h1>Paws in Motion Dog Walking</h1>
+  <h2>Registration Form</h2>
+  <form action="http://example.com/process-user.php" method="POST">
+
+    <label for="owner-name">Owner name:</label>
+    <input 
+      type="text"
+      name="owner-name"
+      id="owner-name"
+      placeholder="Full Name"
+    /><br /><br />
+
+    <label for="password">Password: </label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Password"
+    /><br /><br />
+
+    <label for="tel">Telephone number: </label>
+    <input id="tel" type="tel" name="phone" placeholder="123-456-7890"/><br />
+
+    <h3>Does your dog get along with other dogs?</h3>
+    <input type="radio" id="high" name="plays-well-with-others" value="high" />
+    <label for="high">The more dogs, the better!</label><br />
+    <input type="radio" id="medium" name="plays-well-with-others" value="medium" />
+    <label for="medium">It depends on the dog, but generally they are ok</label><br />
+    <input type="radio" id="low" name="plays-well-with-others" value="low" />
+    <label for="low">My dog prefers their walkies solo</label><br />
+
+    <h3>What are your dog's favorite toys?</h3>
+    <input type="checkbox" id="toy-1" name="toy-1" value="kong" />
+    <label for="toy-1">Kong </label><br />
+    <input type="checkbox" id="toy-2" name="toy-2" value="stuffed-animals" />
+    <label for="toy-2">Stuffed Animals</label><br />
+    <input type="checkbox" id="toy-3" name="toy-3" value="rope-toys" />
+    <label for="toy-3">Rope Toys</label><br />
+    <input type="checkbox" id="toy-4" name="toy-4" value="squeaky-toys" />
+    <label for="toy-4">Squeaky Toys</label><br />
+    <input type="checkbox" id="toy-5" name="toy-5" value="balls" />
+    <label for="toy-5">Balls, Frisbees, anything a dog can fetch!</label>
+
+    <h3><label for="size">What size is your dog?</label></h3>
+    <select id="size" name="size">
+      <option value="small" selected>Small (0-25 pounds)</option>
+      <option value="medium">Medium (26-50 pounds)</option>
+      <option value="large">Large (51-75 pounds)</option>
+      <option value="x-large">Extra Large (over 75 pounds)</option>
+    </select><br /><br />
+
+    <h3><label for="message">Anything else we should know about your dog?</label></h3>
+    <textarea id="message" name="message"></textarea><br /><br />
+
+    <input type="submit" value="Sign me up!" />
+  </form>
+</body>
+</html>
